@@ -1,0 +1,56 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */html{background-color: blue}
+ body { padding-top: 100px; }
+ footer { margin-top: 100px; }
+ table, td, th { vertical-align: middle; border: none; }
+ th { border-bottom: 1px solid #DDD; }
+ .polling_message {
+   color: red;
+   position: absolute;
+   top:0;
+
+width:100%;
+   margin-right: 2%;
+ }
+
+ .view_port {
+   background-color: black;
+   height: 75px;
+   width: 45%;
+   overflow: hidden;
+   position: relative;margin: 0 auto;
+ }
+
+ .cylon_eye {
+   background-color: red;
+   background-image: -webkit-linear-gradient(    left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+   background-image:    -moz-linear-gradient(    left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+   background-image:      -o-linear-gradient(    left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+   background-image:         linear-gradient(to right, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+   color: white;
+   height: 100%;
+   width: 20%;
+
+   -webkit-animation: 4s linear 0s infinite alternate move_eye;
+      -moz-animation: 4s linear 0s infinite alternate move_eye;
+        -o-animation: 4s linear 0s infinite alternate move_eye;
+           animation: 4s linear 0s infinite alternate move_eye;
+ }
+
+ @-webkit-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+    @-moz-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+      @-o-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+         @keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
